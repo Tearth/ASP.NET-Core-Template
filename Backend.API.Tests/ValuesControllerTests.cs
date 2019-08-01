@@ -1,5 +1,7 @@
 using System.Threading.Tasks;
 using Backend.API.Controllers;
+using Backend.Services.SimpleThing;
+using Moq;
 using Xunit;
 
 namespace Backend.API.Tests
@@ -10,7 +12,10 @@ namespace Backend.API.Tests
         public async Task Get_NoParameters_ShouldReturnValue()
         {
             // Arrange
-            var controller = new ValuesController();
+            var simpleService = new Mock<ISimpleService>();
+            simpleService.Setup(p => p.GetValue()).Returns(Task.FromResult("value"));
+
+            var controller = new ValuesController(simpleService.Object);
 
             // Act
             var result = await controller.Get(1);
