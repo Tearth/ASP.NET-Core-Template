@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Backend.Services.SimpleThing;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.API.Controllers
@@ -8,16 +9,23 @@ namespace Backend.API.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        private readonly ISimpleService _simpleService;
+
+        public ValuesController(ISimpleService simpleService)
         {
-            return new[] { "value1", "value2" };
+            _simpleService = simpleService;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<List<string>>> Get()
+        {
+            return await _simpleService.GetValues();
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<string>> Get(int id)
         {
-            return "value";
+            return await _simpleService.GetValue();
         }
 
         [HttpPost]
