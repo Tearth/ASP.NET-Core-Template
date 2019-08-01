@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.API", "Backend.API\Backend.API.csproj", "{0606274F-8753-4ABF-BF6D-0077B1A133F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.API", "Backend.API\Backend.API.csproj", "{0606274F-8753-4ABF-BF6D-0077B1A133F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.API.Tests", "Backend.API.Tests\Backend.API.Tests.csproj", "{BAD6A1F4-8D0D-434F-9F13-A254FD2837F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.API.Tests", "Backend.API.Tests\Backend.API.Tests.csproj", "{BAD6A1F4-8D0D-434F-9F13-A254FD2837F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.Services", "Backend.Services\Backend.Services.csproj", "{C2D9F448-4524-4C2C-A169-23118E175A8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.Services", "Backend.Services\Backend.Services.csproj", "{C2D9F448-4524-4C2C-A169-23118E175A8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.Services.Tests", "Backend.Services.Tests\Backend.Services.Tests.csproj", "{AA6D2AFC-C493-4BC4-87A0-F37DC8E31B9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backend.Services.Tests", "Backend.Services.Tests\Backend.Services.Tests.csproj", "{AA6D2AFC-C493-4BC4-87A0-F37DC8E31B9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend.DataAccess", "Backend.DataAccess\Backend.DataAccess.csproj", "{1A9353A9-E4CF-4CDD-BEE3-06336121FF2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{AA6D2AFC-C493-4BC4-87A0-F37DC8E31B9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA6D2AFC-C493-4BC4-87A0-F37DC8E31B9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA6D2AFC-C493-4BC4-87A0-F37DC8E31B9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A9353A9-E4CF-4CDD-BEE3-06336121FF2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A9353A9-E4CF-4CDD-BEE3-06336121FF2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A9353A9-E4CF-4CDD-BEE3-06336121FF2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A9353A9-E4CF-4CDD-BEE3-06336121FF2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
