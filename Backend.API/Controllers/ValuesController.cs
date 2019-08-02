@@ -27,23 +27,5 @@ namespace Backend.API.Controllers
         {
             return await _simpleService.GetValue();
         }
-
-        [HttpPost]
-        public async Task Post([FromBody] string value)
-        {
-
-        }
-
-        [HttpPut("{id}")]
-        public async Task Put(int id, [FromBody] string value)
-        {
-
-        }
-
-        [HttpDelete("{id}")]
-        public async Task Delete(int id)
-        {
-
-        }
     }
 }
