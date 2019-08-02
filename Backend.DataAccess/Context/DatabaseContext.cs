@@ -13,6 +13,11 @@ namespace Backend.DataAccess.Context
             
         }
 
+        public DatabaseContext(DbContextOptions options) : base(options)
+        {
+
+        }
+
         private static DbContextOptions<DatabaseContext> GetDbContextOptions(IConfiguration configuration)
         {
             return new DbContextOptionsBuilder<DatabaseContext>()

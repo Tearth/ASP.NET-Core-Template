@@ -1,6 +1,10 @@
 using System;
 using System.Threading.Tasks;
+using Backend.DataAccess.Context;
+using Backend.DataAccess.Models;
 using Backend.Services.SimpleThing;
+using Backend.Services.Tests.Helpers;
+using Microsoft.EntityFrameworkCore;
 using Xunit;
 
 namespace Backend.Services.Tests
@@ -11,7 +15,11 @@ namespace Backend.Services.Tests
         public async Task GetValue_NoParameters_ShouldReturnValue()
         {
             // Arrange
-            var simpleService = new SimpleService();
+            var database = DatabaseFactory.CreateContext();
+            var simpleService = new SimpleService(database);
+
+            database.TestModels.Add(new TestModel { Id = 1, Name = "value" });
+            database.SaveChanges();
 
             // Act
             var result = await simpleService.GetValue();
@@ -23,7 +31,12 @@ namespace Backend.Services.Tests
         public async Task GetValues_NoParameters_ShouldReturnValues()
         {
             // Arrange
-            var simpleService = new SimpleService();
+            var database = DatabaseFactory.CreateContext();
+            var simpleService = new SimpleService(database);
+
+            database.TestModels.Add(new TestModel { Id = 1, Name = "value1" });
+            database.TestModels.Add(new TestModel { Id = 2, Name = "value2" });
+            database.SaveChanges();
 
             // Act
             var result = await simpleService.GetValues();
