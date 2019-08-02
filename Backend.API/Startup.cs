@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Backend.DataAccess.Context;
+using Backend.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -28,7 +29,7 @@ namespace Backend.API
 
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            builder.RegisterModule<ApiContainerBuilder>();
+            builder.RegisterModule<ServicesContainerBuilder>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

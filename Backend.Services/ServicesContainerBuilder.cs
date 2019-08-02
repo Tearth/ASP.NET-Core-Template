@@ -11,7 +11,6 @@ namespace Backend.Services
                 .Where(p => p.IsSubclassOf(typeof(ServiceBase)))
                 .AsImplementedInterfaces();
 
-            builder.RegisterModule<DataAccessContainerBuilder>();
             base.Load(builder);
         }
     }
