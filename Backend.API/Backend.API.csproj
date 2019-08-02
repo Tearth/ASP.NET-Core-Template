@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Backend.DataAccess\Backend.DataAccess.csproj" />
+    <ProjectReference Include="..\Backend.Infrastructure\Backend.Infrastructure.csproj" />
     <ProjectReference Include="..\Backend.Services\Backend.Services.csproj" />
   </ItemGroup>
 
