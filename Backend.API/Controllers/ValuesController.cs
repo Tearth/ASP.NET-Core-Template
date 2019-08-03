@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Backend.Services.Dtos;
 using Backend.Services.SimpleThing;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,13 +18,13 @@ namespace Backend.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<string>>> Get()
+        public async Task<ActionResult<List<TestDto>>> Get()
         {
             return await _simpleService.GetValues();
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<string>> Get(int id)
+        public async Task<ActionResult<TestDto>> Get(int id)
         {
             return await _simpleService.GetValue();
         }

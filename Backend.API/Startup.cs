@@ -1,6 +1,9 @@
-﻿using Autofac;
+﻿using System.Reflection;
+using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using AutoMapper;
 using Backend.DataAccess.Context;
+using Backend.Infrastructure;
 using Backend.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -25,6 +28,9 @@ namespace Backend.API
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<DatabaseContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("MainDatabase")));
+            services.AddAutoMapper(
+                typeof(ServicesMapperProfile), 
+                typeof(InfrastructureMapperProfile));
         }
 
         public void ConfigureContainer(ContainerBuilder builder)
