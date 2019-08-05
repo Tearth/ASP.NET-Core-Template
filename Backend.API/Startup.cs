@@ -31,6 +31,10 @@ namespace Backend.API
             services.AddAutoMapper(
                 typeof(ServicesMapperProfile), 
                 typeof(InfrastructureMapperProfile));
+            services.AddCors(o => o.AddPolicy("CorsPolicy", builder => builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()));
         }
 
         public void ConfigureContainer(ContainerBuilder builder)
@@ -45,6 +49,7 @@ namespace Backend.API
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors("CorsPolicy");
             app.UseMvc();
         }
     }
