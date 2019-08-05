@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
@@ -35,6 +36,17 @@ namespace Backend.API
             return WebHost.CreateDefaultBuilder(args)
                 .ConfigureServices(services => services.AddAutofac())
                 .UseStartup<Startup>()
+#if DEBUG
+                .UseUrls("http://127.0.0.1:6000")
+#else
+                /* .UseKestrel(options =>
+                 {
+                     options.Listen(IPAddress.Any, 6000, listenOptions =>
+                     {
+                         listenOptions.UseHttps("certificate.pfx");
+                     });
+                 })*/
+#endif
                 .ConfigureLogging(logging =>
                 {
                     logging.ClearProviders();
