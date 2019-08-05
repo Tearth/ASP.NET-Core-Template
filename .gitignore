@@ -350,3 +350,4 @@ yarn-error.log*
 *.sln
 *.sw?
 
+/Frontend/dist
