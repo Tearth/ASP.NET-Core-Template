@@ -1,4 +1,4 @@
-import { API_URL_BASE } from '@/constants';
+import { API_URL_BASE } from '@/Constants';
 import { SimpleModel } from '@/models/SimpleModel';
 
 export class SimpleService {
