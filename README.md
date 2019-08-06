@@ -25,3 +25,17 @@ Backend is split into several projects which allows to separate logic between th
 Additionaly, there are two projects containing unit tests.
  - Backend.**Infrastructure.Tests**
  - Backend.**Services.Tests**
+
+## How to run
+## Frontend
+Build and run:
+```npm
+npm run serve
+```
+Publish:
+```
+npm run build
+```
+
+## Backend
+Open the solution in Visual Studio, Backend.API should be set as the startup project.
