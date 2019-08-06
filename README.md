@@ -27,7 +27,7 @@ Additionaly, there are two projects containing unit tests.
  - Backend.**Services.Tests**
 
 ## How to run
-## Frontend
+#### Frontend
 Build and run:
 ```npm
 npm run serve
@@ -37,5 +37,5 @@ Publish:
 npm run build
 ```
 
-## Backend
+#### Backend
 Open the solution in Visual Studio, Backend.API should be set as the startup project.
