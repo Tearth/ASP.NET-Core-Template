@@ -36,17 +36,15 @@ namespace Backend.API
             return WebHost.CreateDefaultBuilder(args)
                 .ConfigureServices(services => services.AddAutofac())
                 .UseStartup<Startup>()
-#if DEBUG
-                .UseUrls("http://127.0.0.1:6000")
-#else
-                /* .UseKestrel(options =>
-                 {
-                     options.Listen(IPAddress.Any, 6000, listenOptions =>
-                     {
-                         listenOptions.UseHttps("certificate.pfx");
-                     });
-                 })*/
+                .UseKestrel(options =>
+                {
+#if !DEBUG
+                    options.Listen(IPAddress.Any, 4001, listenOptions =>
+                    {
+                        listenOptions.UseHttps("certificate.pfx");
+                    });
 #endif
+                })
                 .ConfigureLogging(logging =>
                 {
                     logging.ClearProviders();
