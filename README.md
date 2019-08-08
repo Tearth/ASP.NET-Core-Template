@@ -22,7 +22,7 @@ Backend is split into several projects which allows to separate logic between th
  - Backend.**Services**
  - Backend.**DataAccess**
 
-Additionaly, there are two projects containing unit tests.
+Additionally, there are two projects containing unit tests.
  - Backend.**Infrastructure.Tests**
  - Backend.**Services.Tests**
 
@@ -39,9 +39,9 @@ npm run build
 
 #### Backend
 Open the solution in Visual Studio, Backend.API should be set as the startup project.
-Template uses the SQLite database as the default data storage. Before the first run you have to
-create a migration in the Package Manager Console. Select Backend.DataAccess as the Default project
-in the combo box and then type:
+The template uses the SQLite database as the default data storage. Before the first run, you have to
+create a migration in the Package Manager Console by selecting Backend.DataAccess as the Default project
+in the combo box and typing:
 ```
 Add-Migration InitialMigration
 Update-Database InitialMigration
