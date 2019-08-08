@@ -1,11 +1,8 @@
-using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Backend.DataAccess.Context;
 using Backend.DataAccess.Models;
 using Backend.Services.SimpleThing;
 using Backend.Services.Tests.Helpers;
-using Microsoft.EntityFrameworkCore;
 using Xunit;
 
 namespace Backend.Services.Tests

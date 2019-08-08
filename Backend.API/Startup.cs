@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-using Autofac;
-using Autofac.Extensions.DependencyInjection;
+﻿using Autofac;
 using AutoMapper;
 using Backend.DataAccess.Context;
 using Backend.Infrastructure;

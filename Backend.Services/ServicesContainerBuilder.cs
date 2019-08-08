@@ -1,5 +1,4 @@
 ﻿using Autofac;
-using Backend.DataAccess;
 
 namespace Backend.Services
 {

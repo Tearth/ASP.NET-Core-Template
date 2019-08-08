@@ -1,6 +1,5 @@
 ﻿using Backend.DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace Backend.DataAccess.Context
 {

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Net;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
